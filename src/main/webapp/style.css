@@ -1,0 +1,55 @@
+.mainText {
+    color: white;
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    width: 1000px;
+    height:600px;
+
+}
+.leftButton {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.rightButton {
+    margin-top: -20px;
+    margin-left: 300px;
+}
+.changePlayer{
+    margin-top: 50px;
+    margin-left: 900px;
+}
+.userName {
+    margin-top: 50px;
+    margin-left: 900px;
+}
+.mainBody {
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.leftButtonStyle {
+    color: white;
+    background-color: #f44336;
+    border-radius: 4px;
+}
+.rightButtonStyle {
+    color: white;
+    background-color: #f44336;
+    border-radius: 4px;
+}
+.changePlayerStyle {
+    color: white;
+    background-color: #f44336;
+    border-radius: 4px;
+}
+.newGame {
+    color: white;
+    background-color: #f44336;
+    border-radius: 4px;
+}
+.input {
+    color: white;
+    margin-top: 20px;
+    background: transparent;
+}
