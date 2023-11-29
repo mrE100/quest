@@ -52,6 +52,4 @@
 
 <% session.setAttribute("currentQuest", quest);%>
 
-</body>
-
 </html>
