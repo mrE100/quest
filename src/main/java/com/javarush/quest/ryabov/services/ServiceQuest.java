@@ -2,12 +2,9 @@ package com.javarush.quest.ryabov.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.javarush.quest.ryabov.entity.Quest;
-
-import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.io.InputStream;
+import java.util.*;
 
 public class ServiceQuest {
     private List<Quest> questList;
@@ -18,15 +15,15 @@ public class ServiceQuest {
     }
 
     private void initQuestList() {
-        try {
-            questList = Arrays.asList(new ObjectMapper().readValue(new File(Objects.requireNonNull(ServiceQuest.class
-                    .getClassLoader().getResource("/firstQuest.json")).getFile()), Quest[].class));
+        try (InputStream inputStream = getClass().getResourceAsStream("/firstQuest.json")) {
+            questList = Arrays.asList(new ObjectMapper().readValue(inputStream, Quest[].class));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
     public Quest startQuest() {
+        initQuestList();
         return getQuestList().get(0);
     }
 }

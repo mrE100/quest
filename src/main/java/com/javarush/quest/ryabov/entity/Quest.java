@@ -6,10 +6,10 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 public class Quest {
     private int id;
     private String questText;
-    private String leftButtonText;
-    private int nextLeft;
-    private int nextRight;
-    private String rightButtonText;
+    private String firstButtonText;
+    private int nextFirst;
+    private int nextSecond;
+    private String secondButtonText;
 
     public Quest() {}
 
@@ -17,23 +17,23 @@ public class Quest {
         return questText;
     }
 
-    public String getLeftButtonText() {
-        return leftButtonText;
+    public String getFirstButtonText() {
+        return firstButtonText;
     }
 
-    public String getRightButtonText() {
-        return rightButtonText;
+    public String getSecondButtonText() {
+        return secondButtonText;
     }
 
     public int getId() {
         return id;
     }
 
-    public int getNextLeft() {
-        return nextLeft;
+    public int getNextFirst() {
+        return nextFirst;
     }
 
-    public int getNextRight() {
-        return nextRight;
+    public int getNextSecond() {
+        return nextSecond;
     }
 }
