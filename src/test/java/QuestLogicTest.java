@@ -17,7 +17,7 @@ class QuestLogicTest {
 
         String path = "/test.json";
 
-        List<Quest> result = Arrays.asList(new ObjectMapper().readValue(getClass().getResourceAsStream("/test.json"), Quest[].class));
+        List<Quest> result = Arrays.asList(new ObjectMapper().readValue(getClass().getResourceAsStream(path), Quest[].class));
         assertEquals("Начало", result.get(0).getFirstButtonText());
         assertEquals("Вариант1", result.get(1).getFirstButtonText());
     }
