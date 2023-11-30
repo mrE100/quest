@@ -4,6 +4,7 @@ import java.io.*;
 
 import com.javarush.quest.ryabov.entity.Quest;
 import com.javarush.quest.ryabov.services.ServiceQuest;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -17,7 +18,8 @@ public class InitServlet extends HttpServlet {
         Quest quest = new ServiceQuest().startQuest();
         currentSession.setAttribute("currentQuest", quest);
         currentSession.setAttribute("userName", "DefaultName");
-        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+        ServletContext context = getServletContext();
+        context.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 
 }

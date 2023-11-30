@@ -1,4 +1,4 @@
 [
-  {"id":0,"firstButtonText": "Начало", "nextFirst" : 1, "secondButtonText": "Начало", "nextSecond" : 1, "questText": "Текст для теста"},
+  {"id":0,"firstButtonText": "Начать", "nextFirst" : 1, "secondButtonText": "Начать", "nextSecond" : 1, "questText": "Текст для теста"},
   {"id":1,"firstButtonText": "Вариант1", "nextFirst" : 0, "secondButtonText": "Вариант2", "nextSecond" : 0, "questText": "Второй тестовый текст"}
 ]
